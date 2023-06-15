@@ -1,0 +1,127 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#pokemonList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 960px;
+  margin: 80px auto;
+  gap: 20px;
+}
+
+/* Card Pokémon */
+.name {
+  text-transform: capitalize;
+  margin-bottom: .25rem;
+}
+
+.pokemon-card {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.number {
+  display: flex;
+  justify-content: end;
+  color: rgba(70, 68, 68, 0.925);
+}
+
+.type {
+  text-transform: capitalize;
+  display: flex;
+  position: relative;
+  color: rgba(70, 68, 68, 0.925);
+  bottom: 14.8em;
+}
+
+.pokemon-image {
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Poke Detail */
+#pokemonName {
+  text-transform: capitalize;
+}
+
+#pokemonDetails {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 170px;
+  height: 294px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #9b9999d3;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+#pokemonDetails.active {
+  opacity: 1;
+}
+
+#pokemonDetails ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px;
+  gap: 8px;
+}
+
+/* Navegation */
+.navegation, footer {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #db2e51;
+  color: #fff;
+}
+
+.navegation h1 {
+  margin: 0;
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer{
+  top: 95%;
+  bottom: 0;
+}
+#loadMoreButton {
+  background-color: #db2e51;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  margin: 0 auto;
+  transition: .3s;
+}
+#loadMoreButton:hover{
+  color: rgb(243, 200, 9);
+}
+
+@media screen and (max-width: 1040px) {
+  #pokemonList {
+    grid-template-columns: repeat(2, 1fr);
+    width: 450px;
+    max-width: 500px;
+  }
+}

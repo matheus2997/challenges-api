@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <!-- Font Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+  <!-- Estilização -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pokedex.css">
+</head>
+<body>
+  <header>
+    <nav class="navegation">
+      <h1>Pokédex</h1>
+    </nav>
+  </header>
+
+
+  <section class="poke-dex">
+
+    <div class="grid">
+      <div id="pokemonList"></div>
+    </div>
+    <div id="pokemonDetails" class="hidden">
+      <h2 id="pokemonName"></h2>
+      <ul id="pokemonStatsContainer"></ul>
+    </div>
+  </section>
+
+  <Footer>
+    <button id="loadMoreButton">Click Aqui & Carregue Mais Pokemons</button>
+  </Footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
